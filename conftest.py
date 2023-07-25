@@ -22,4 +22,4 @@ def user():
 
     yield user
 
-    user.remove
+    user.remove()
