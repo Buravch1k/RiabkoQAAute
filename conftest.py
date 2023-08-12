@@ -1,6 +1,7 @@
 import pytest
 from modules.api.clients.github import GitHub
 from modules.common.database import Database
+from modules.ui.page_objects.sign_in_page import SignInPage
 
 
 class User:
@@ -37,3 +38,9 @@ def github_api():
 def database():
     database = Database("/Users/apple/RiabkoQAAuto23/become_qa_auto.db")
     yield database
+
+
+@pytest.fixture
+def sign_in_page():
+    page = SignInPage()
+    yield page
